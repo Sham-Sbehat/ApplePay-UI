@@ -1,7 +1,14 @@
-import Header from './components/Header/Header'
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import theme  from "./theme/theme";
+import PaymentLayout from "./components/payment/PaymentLayout";
 
 function App() {
-  return <Header />;
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <PaymentLayout />
+    </ThemeProvider>
+  );
 }
 
 export default App;
