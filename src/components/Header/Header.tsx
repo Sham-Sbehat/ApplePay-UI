@@ -4,9 +4,11 @@ import { styled } from '@mui/material/styles';
 
 
 const HeaderIcon = styled(PaymentIcon)(({ theme }) => ({
-  fontSize: '1.5rem',
+  fontSize: '2rem',
   marginRight: '8px',
   borderRadius: '50%',
+  Width:'56px',
+  Height:'56px',
   backgroundColor: theme.palette.primary.light, 
   border: `2px solid ${theme.palette.secondary.light}`, 
   padding: '4px',

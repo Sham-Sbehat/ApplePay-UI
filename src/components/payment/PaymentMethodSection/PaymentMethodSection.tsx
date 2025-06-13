@@ -1,7 +1,7 @@
 import { Box, Divider, Stack, Typography, useTheme } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import type { PaymentCardProps, ThemeStyles } from "../../types/payment";
-import PaymentMethod from "./PaymentMethod";
+import type { PaymentCardProps, ThemeStyles } from "../../../types/payment";
+
 
 const PaymentMethodSection: React.FC<PaymentCardProps> = ({ mode, children }) => {
   const theme = useTheme();
