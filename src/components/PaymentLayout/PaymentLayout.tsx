@@ -252,12 +252,11 @@ const PaymentLayout: React.FC = () => {
         <ApplePaySummaryCard mode="light">
           <SummaryContent mode="light" items={detailItems} />
         </ApplePaySummaryCard>
-        <div  style={{marginTop:'20px'}}>
-<ApplePaySummaryCard mode="dark" >
-          <SummaryContent mode="dark" items={detailItems} />
-        </ApplePaySummaryCard>
+        <div style={{ marginTop: "20px" }}>
+          <ApplePaySummaryCard mode="dark">
+            <SummaryContent mode="dark" items={detailItems} />
+          </ApplePaySummaryCard>
         </div>
-      
       </BorderBox>
     </Container>
   );

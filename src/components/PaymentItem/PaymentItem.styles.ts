@@ -7,7 +7,7 @@ export const PaymentItemContainer = styled(Box)<{ mode: "light" | "dark" }>`
   color: ${({ mode }) => (mode === "dark" ? "#fff" : "#000")};
   border-radius: 16px;
   padding: 18px;
-  width: 300px;
+  width: 343px;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -22,8 +22,8 @@ export const IconWrapper = styled(Box)<{ bg: string; color: string }>`
   width: 32px;
   height: 32px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
 `;
 
 export const StyledTitle = styled(Typography)<{ colorValue: string }>`

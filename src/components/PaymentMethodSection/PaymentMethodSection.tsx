@@ -1,9 +1,11 @@
 import { Box, Divider, Stack, Typography, useTheme } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import type { PaymentCardProps, ThemeStyles } from "../../../types/payment";
+import type { PaymentCardProps, ThemeStyles } from "../../types/payment";
 
-
-const PaymentMethodSection: React.FC<PaymentCardProps> = ({ mode, children }) => {
+const PaymentMethodSection: React.FC<PaymentCardProps> = ({
+  mode,
+  children,
+}) => {
   const theme = useTheme();
   const currentMode = mode || theme.palette.mode;
 
@@ -62,4 +64,4 @@ const PaymentMethodSection: React.FC<PaymentCardProps> = ({ mode, children }) =>
   );
 };
 
-export default PaymentMethodSection; 
+export default PaymentMethodSection;

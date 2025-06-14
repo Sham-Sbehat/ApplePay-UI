@@ -1,5 +1,5 @@
 import { Box, Divider, Stack, Typography, useTheme } from "@mui/material";
-import type { PaymentMethodProps, ThemeStyles } from "../../../types/payment";
+import type { PaymentMethodProps, ThemeStyles } from "../../types/payment";
 
 const PaymentMethod: React.FC<PaymentMethodProps> = ({
   mode,
@@ -63,4 +63,4 @@ const PaymentMethod: React.FC<PaymentMethodProps> = ({
   );
 };
 
-export default PaymentMethod; 
+export default PaymentMethod;

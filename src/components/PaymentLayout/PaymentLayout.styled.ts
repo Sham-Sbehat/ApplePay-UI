@@ -9,13 +9,12 @@ export const Container = styled.div`
 `;
 
 export const BorderBox = styled.div`
-  min-width: 400px;
+  min-width: 440px;
   border: 2px dashed #7b61ff;
   border-radius: 16px;
   padding: 30px;
   position: relative;
 `;
-
 
 export const CaptionTypography = styled.div`
   font-family: monospace;
@@ -34,7 +33,8 @@ export const StackRow = styled.div<{ mb?: boolean }>`
 export const ApplePayCardBox = styled.div<{ mode: "light" | "dark" }>`
   background-color: ${({ mode }) => (mode === "dark" ? "#232526" : "#F5F5F7")};
   color: ${({ mode }) => (mode === "dark" ? "#fff" : "#000")};
-  box-shadow: ${({ mode }) => (mode === "light" ? "0 1px 3px rgba(0,0,0,0.1)" : "none")};
+  box-shadow: ${({ mode }) =>
+    mode === "light" ? "0 1px 3px rgba(0,0,0,0.1)" : "none"};
   padding: 8px 16px;
   min-width: 320px;
   max-width: 340px;
@@ -73,7 +73,8 @@ export const IconWrapper = styled.div<{ mode: "light" | "dark" }>`
 
 export const DividerStyled = styled.div<{ mode: "light" | "dark" }>`
   margin: 8px 0;
-  border-bottom: 1px solid ${({ mode }) => (mode === "dark" ? "#444" : "#E0E0E0")};
+  border-bottom: 1px solid
+    ${({ mode }) => (mode === "dark" ? "#444" : "#E0E0E0")};
 `;
 
 export const CenterColumn = styled.div`

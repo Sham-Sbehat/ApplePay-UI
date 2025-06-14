@@ -1,23 +1,25 @@
-import { Stack } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Stack } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import {
   StyledCard,
   StyledAppleIcon,
   StyledTypography,
   StyledIconButton,
-} from './ApplePaySummaryCard.styles';
+} from "./ApplePaySummaryCard.styles";
 
-interface ApplePaySummaryCardProps {
-  children?: React.ReactNode;
-  mode?: 'light' | 'dark';
-}
+import type {ApplePaySummaryCardProps} from '../../types/cards'
 
 const ApplePaySummaryCard: React.FC<ApplePaySummaryCardProps> = ({
   children,
-  mode = 'light',
+  mode = "light",
 }) => (
   <StyledCard mode={mode}>
-    <Stack direction="row" alignItems="center" justifyContent="space-between" mb={1}>
+    <Stack
+      direction="row"
+      alignItems="center"
+      justifyContent="space-between"
+      mb={1}
+    >
       <Stack direction="row" alignItems="center" spacing={0.5}>
         <StyledAppleIcon mode={mode} />
         <StyledTypography mode={mode}>Pay</StyledTypography>
@@ -28,7 +30,7 @@ const ApplePaySummaryCard: React.FC<ApplePaySummaryCardProps> = ({
     </Stack>
     <Stack direction="column" spacing={1}>
       {children}
-   </Stack>
+    </Stack>
   </StyledCard>
 );
 

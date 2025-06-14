@@ -6,7 +6,8 @@ export const Container = styled.div`
 
 export const Title = styled.h6<{ isSummarySheet: boolean }>`
   margin-bottom: 16px;
-  text-decoration: ${({ isSummarySheet }) => (isSummarySheet ? "none" : "underline")};
+  text-decoration: ${({ isSummarySheet }) =>
+    isSummarySheet ? "none" : "underline"};
   font-size: 1rem;
   font-weight: 700;
 `;
@@ -22,7 +23,7 @@ export const ItemWrapper = styled.div`
 export const ContentBox = styled.div`
   border-radius: 15px;
   width: 375px;
-  height:92px;
+  height: 92px;
   flex: 1;
 `;
 
@@ -33,5 +34,5 @@ export const CaptionWrapper = styled.div`
 
 export const Caption = styled.div`
   font-weight: 500;
-  fontSize: "12px",
+  fontsize: "12px";
 `;

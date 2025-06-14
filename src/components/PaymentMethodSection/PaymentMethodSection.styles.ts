@@ -38,5 +38,5 @@ export const Subtitle = styled.span<{ color: string }>`
 export const Title = styled.span<{ color: string }>`
   color: ${({ color }) => color};
   font-weight: 700;
-  font-size: 1rem; 
+  font-size: 1rem;
 `;

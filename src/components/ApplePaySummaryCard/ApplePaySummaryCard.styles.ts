@@ -13,7 +13,7 @@ export const StyledCard = styled(Box)<{ mode: 'light' | 'dark' }>`
   position: relative;
   margin-bottom:20px
   height:189px;
-  width:343px;
+  width:375px;
   gap:8px;
 `;
 

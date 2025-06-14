@@ -1,7 +1,7 @@
 import { Stack, useTheme } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Box } from "@mui/material";
-import type { ReactNode } from "react";
+
 import {
   PaymentItemContainer,
   IconWrapper,
@@ -10,16 +10,8 @@ import {
   ArrowWrapper,
 } from "./PaymentItem.styles";
 
-interface PaymentItemProps {
-  title: string;
-  subtitle1: string;
-  subtitle2?: string;
-  subtitle3?: string;
-  price?: string;
-  icon: string | ReactNode;
-  mode: "light" | "dark";
-  isSummaryItem?: boolean;
-}
+
+import type {PaymentItemProps} from '../../types/cards';
 
 const PaymentItem: React.FC<PaymentItemProps> = ({
   title,
@@ -28,7 +20,6 @@ const PaymentItem: React.FC<PaymentItemProps> = ({
   subtitle3,
   icon,
   mode = "light",
-
 }) => {
   const theme = useTheme();
 
@@ -36,10 +27,11 @@ const PaymentItem: React.FC<PaymentItemProps> = ({
     text: mode === "dark" ? "#fff" : "#000",
     subtitle: mode === "dark" ? "#ccc" : "#555",
     iconColor: mode === "dark" ? "#fff" : "#000",
-    cardIconBg: mode === "dark" ? theme.palette.primary.dark : theme.palette.secondary.light,
+    cardIconBg:
+      mode === "dark"
+        ? theme.palette.primary.dark
+        : theme.palette.secondary.light,
   };
-
-  
 
   return (
     <PaymentItemContainer mode={mode}>
@@ -59,22 +51,34 @@ const PaymentItem: React.FC<PaymentItemProps> = ({
         <Box>
           {typeof icon === "string" ? (
             <>
-              <StyledTitle colorValue={styles.text} style={{fontSize:'15px'}} >
+              <StyledTitle
+                colorValue={styles.text}
+                style={{ fontSize: "15px" }}
+              >
                 {title}
               </StyledTitle>
               <Stack direction="column">
                 {subtitle1 && (
-                  <StyledSubtitle colorValue={styles.subtitle}  style={{fontSize:'13px'}}>
+                  <StyledSubtitle
+                    colorValue={styles.subtitle}
+                    style={{ fontSize: "13px" }}
+                  >
                     {subtitle1}
                   </StyledSubtitle>
                 )}
                 {subtitle2 && (
-                  <StyledSubtitle colorValue={styles.subtitle} style={{fontSize:'13px'}}>
+                  <StyledSubtitle
+                    colorValue={styles.subtitle}
+                    style={{ fontSize: "13px" }}
+                  >
                     {subtitle2}
                   </StyledSubtitle>
                 )}
                 {subtitle3 && (
-                  <StyledSubtitle colorValue={styles.subtitle} style={{fontSize:'13px'}}>
+                  <StyledSubtitle
+                    colorValue={styles.subtitle}
+                    style={{ fontSize: "13px" }}
+                  >
                     {subtitle3}
                   </StyledSubtitle>
                 )}
@@ -82,22 +86,34 @@ const PaymentItem: React.FC<PaymentItemProps> = ({
             </>
           ) : (
             <>
-              <StyledSubtitle colorValue={styles.subtitle} style={{fontSize:'15px'}}>
+              <StyledSubtitle
+                colorValue={styles.subtitle}
+                style={{ fontSize: "15px" }}
+              >
                 {title}
               </StyledSubtitle>
               <Stack direction="column" spacing={0.5}>
                 {subtitle1 && (
-                  <StyledTitle colorValue={styles.text} style={{fontSize:'13px'}} >
+                  <StyledTitle
+                    colorValue={styles.text}
+                    style={{ fontSize: "13px" }}
+                  >
                     {subtitle1}
                   </StyledTitle>
                 )}
                 {subtitle2 && (
-                  <StyledTitle colorValue={styles.text} style={{fontSize:'13px'}}>
+                  <StyledTitle
+                    colorValue={styles.text}
+                    style={{ fontSize: "13px" }}
+                  >
                     {subtitle2}
                   </StyledTitle>
                 )}
                 {subtitle3 && (
-                  <StyledTitle colorValue={styles.text}style={{fontSize:'13px'}} >
+                  <StyledTitle
+                    colorValue={styles.text}
+                    style={{ fontSize: "13px" }}
+                  >
                     {subtitle3}
                   </StyledTitle>
                 )}

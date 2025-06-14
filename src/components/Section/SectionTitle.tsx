@@ -7,8 +7,8 @@ type SectionTitleProps = {
 };
 
 const Title = styled.h2`
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 24px;
   margin: 0;
 `;
 
