@@ -47,7 +47,7 @@ const ApplePayColumn = ({
           title="Apple Card"
           subtitle1="10880 Malibu Point Malibu Cal..."
           subtitle2="•••• 1234"
-          icon="/AppleCard.png"
+          icon="ApplePay-UI/AppleCard.png"
           mode={mode}
         />
         <PaymentItem
