@@ -84,7 +84,7 @@ const ApplePayCard: React.FC<ApplePayCardProps> = ({ mode, face }) => (
       {face ? (
         <>
           <img
-            src="ApplePay-UI/Button.svg"
+            src={`${import.meta.env.BASE_URL}Button.svg`}
             alt="Side Button"
             style={{ width: 32, height: 32 }}
           />
@@ -94,7 +94,7 @@ const ApplePayCard: React.FC<ApplePayCardProps> = ({ mode, face }) => (
       ) : (
         <>
           <img
-            src="ApplePay-UI/FingerPrint.svg"
+            src={`${import.meta.env.BASE_URL}FingerPrint.svg`}
             alt="TouchID"
             style={{ width: 32, height: 32 }}
           />

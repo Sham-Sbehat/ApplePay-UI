@@ -43,7 +43,7 @@ const ApplePayCard = ({
       {face ? (
         <>
           <img
-            src="ApplePay-UI/Button.svg"
+            src={`${import.meta.env.BASE_URL}Button.svg`}
             alt="Side Button"
             style={{ width: 32, height: 32 }}
           />
@@ -61,7 +61,7 @@ const ApplePayCard = ({
       ) : (
         <>
           <img
-            src="ApplePay-UI/FingerPrint.svg"
+            src={`${import.meta.env.BASE_URL}FingerPrint.svg`}
             alt="TouchID"
             style={{ width: 32, height: 32 }}
           />
@@ -88,7 +88,7 @@ const PaymentLayout: React.FC = () => {
           title="Apple Card"
           subtitle1="10880 Malibu Point Malibu Cal..."
           subtitle2="•••• 1234"
-          icon="ApplePay-UI/AppleCard.png"
+          icon={`${import.meta.env.BASE_URL}AppleCard.png`}
           mode="light"
         />
       ),
@@ -141,7 +141,7 @@ const PaymentLayout: React.FC = () => {
           title="Apple Card"
           subtitle1="10880 Malibu Point Malibu Cal..."
           subtitle2="•••• 1234"
-          icon="ApplePay-UI/AppleCard.png"
+          icon={`${import.meta.env.BASE_URL}AppleCard.png`}
           mode="dark"
         />
       ),
